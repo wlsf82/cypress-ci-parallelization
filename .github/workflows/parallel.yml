@@ -1,0 +1,44 @@
+name: ci-parallel
+
+on:
+  push:
+    branches:
+      - parallel
+
+jobs:
+  cypress-run-1:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress parallel run 1 🧪.
+        uses: cypress-io/github-action@v4
+        with:
+          command: npm run test:suite-1
+  cypress-run-2:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress parallel run 2 🧪.
+        uses: cypress-io/github-action@v4
+        with:
+          command: npm run test:suite-2
+  cypress-run-3:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress parallel run 3 🧪.
+        uses: cypress-io/github-action@v4
+        with:
+          command: npm run test:suite-3
+  cypress-run-4:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress parallel run 4 🧪.
+        uses: cypress-io/github-action@v4
+        with:
+          command: npm run test:suite-4

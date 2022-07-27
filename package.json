@@ -4,7 +4,11 @@
   "description": "Sample project to demonstrate ways of running Cypress tests in parallel on CI.",
   "scripts": {
     "cy:open": "cypress open",
-    "test": "cypress run"
+    "test": "cypress run",
+    "test:suite-1": "cypress run --spec 'cypress/e2e/1/*.cy.js'",
+    "test:suite-2": "cypress run --spec 'cypress/e2e/2/*.cy.js'",
+    "test:suite-3": "cypress run --spec 'cypress/e2e/3/*.cy.js'",
+    "test:suite-4": "cypress run --spec 'cypress/e2e/4/*.cy.j's"
   },
   "keywords": [],
   "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr.dev/)",
